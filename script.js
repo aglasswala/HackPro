@@ -1,3 +1,11 @@
+function createCalender(){
+    $('#cardDisplay').empty();
+    var appendEl = $('<div class="row"></div>').appendTo('#cardDisplay');
+    for(var i=0; i<7; i++){
+        $('<div class="card" style="width: 15rem;"><div class="card-header">'+(i+1)+'</div><ul class="list-group list-group-flush"><li class="list-group-item">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Vestibulum at eros</li></ul><div class="card-body"><a class="btn btn-primary">Add Event</a></div></div>').appendTo(appendEl);
+    }
+}
+
 (function($) {
   "use strict"; // Start of use strict
 
