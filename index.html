@@ -13,7 +13,7 @@
   </head>
   <body id="page-top">
   	<!-- Navigation bar --> 
-  	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 	<div class="container">
 		<a class="navbar-brand js-scroll-trigger" href="#page-top"> StudyWITus </a>
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle Navigation"> Menu <i class="fas fa-bars"></i></button>
@@ -25,9 +25,49 @@
 			    <li class="nav-item">
 			      <a class="nav-link js-scroll-trigger" href="#projects">Register</a>
 			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
-			    </li>
+		        <li class="dropdown nav-item">
+		          <a href="#" class="dropdown-toggle nav-link js-scroll-trigger" data-toggle="dropdown">Log In <span class="caret"></span></a>
+		          <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+		            <div class="col-lg-12">
+		              <div class="text-center">
+		                <h3><b>Log In</b></h3></div>
+		              <form id="ajax-login-form" action="http://phpoll.com/login/process" method="post" role="form" autocomplete="off">
+		                <div class="form-group">
+		                  <label for="username">Username</label>
+		                  <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
+		                </div>
+
+		                <div class="form-group">
+		                  <label for="password">Password</label>
+		                  <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" autocomplete="off">
+		                </div>
+
+		                <div class="form-group">
+		                  <div class="row">
+		                    <div class="col-xs-7">
+		                      <input type="checkbox" tabindex="3" name="remember" id="remember">
+		                      <label for="remember"> Remember Me</label>
+		                    </div>
+		                    <div class="col-xs-5 pull-right">
+		                      <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
+		                    </div>
+		                  </div>
+		                </div>
+
+		                <div class="form-group">
+		                  <div class="row">
+		                    <div class="col-lg-12">
+		                      <div class="text-center">
+		                        <a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+		                      </div>
+		                    </div>
+		                  </div>
+		                </div>
+		                <input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
+		              </form>
+		            </div>
+		          </ul>
+		        </li>
 			  </ul>
 	    	</div>
 		</div>
@@ -35,16 +75,100 @@
 
   	<!-- CALENDAR GOES HERE  -->
 
-
-
   	<header class="masthead">
   		<div class="container d-flex h-100 align-items-center">
   			<div class="mx-auto text-center">
-  				<h1 class="mx-auto my-0 text-uppercase">StudyWITus </h1>
+  				<h1 class="mx-auto my-0 text-uppercase">Put here the damn calendar </h1>
+  				<h2 class="text-white-50 mx-auto mt-2 mb-5">Get together and study</h2>
   				<a href="#about" class="btn btn-outline-info js-scroll-trigger"> Here's how </a>
   			</div>
   		</div>
   	</header>
+
+  	 <section id="about" class="about-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
+            <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
+              <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+          </div>
+        </div>
+        <img src="img/ipad.png" class="img-fluid" alt="">
+      </div>
+    </section>
+
+    <section id="signup" class="signup-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+            <form class="form-inline d-flex">
+              <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
+              <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section bg-black">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Address</h4>
+                <hr class="my-4">
+                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-envelope text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Email</h4>
+                <hr class="my-4">
+                <div class="small text-black-50">
+                  <a href="#">hello@yourdomain.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Phone</h4>
+                <hr class="my-4">
+                <div class="small text-black-50">+1 (555) 902-8832</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social d-flex justify-content-center">
+          <a href="#" class="mx-2">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="mx-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="mx-2">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
     
 
     <!-- Optional JavaScript -->
@@ -52,5 +176,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

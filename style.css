@@ -270,6 +270,7 @@
 body {
   font-family: 'Nunito';
   letter-spacing: 0.0625em;
+  background-image: url("https://picsum.photos/1200/600");
 }
 
 a {
