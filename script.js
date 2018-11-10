@@ -1,10 +1,15 @@
 function createCalender(){
     $('#cardDisplay').empty();
-    var appendEl = $('<div class="row"></div>').appendTo('#cardDisplay');
-    for(var i=0; i<7; i++){
-        $('<div class="card" style="width: 15rem;"><div class="card-header">'+(i+1)+'</div><ul class="list-group list-group-flush"><li class="list-group-item">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Vestibulum at eros</li></ul><div class="card-body"><a class="btn btn-primary">Add Event</a></div></div>').appendTo(appendEl);
+    for(var i=0; i<5; i++){
+      if(i === 0) {
+        var appendEl = $('<div class="row"></div>').appendTo('#cardDisplay');
+        $('<div class="col-lg d-flex align-items-stretch""><div class="card mx-auto"><div class="card-body"><h5 class="card-title">asdfasdf</h5><p class="card-text">Denver International Airport is an international airport serving metropolitan Denver, Colorado, United States. At 33,531 acres, it is the largest airport in the United States by total land area.</p><a href="https://www.flydenver.com/" class="btn btn-primary">Take me there</a></div></div></div>').appendTo(appendEl);
+      } else {
+        $('<div class="col-lg d-flex align-items-stretch""><div class="card mx-auto"><div class="card-body"><h5 class="card-title">asdfasdf</h5><p class="card-text">Denver International Airport is an international airport serving metropolitan Denver, Colorado, United States. At 33,531 acres, it is the largest airport in the United States by total land area.</p><a href="https://www.flydenver.com/" class="btn btn-primary">Take me there</a></div></div></div><').appendTo(appendEl);
+      }
     }
 }
+
 
 (function($) {
   "use strict"; // Start of use strict
