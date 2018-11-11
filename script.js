@@ -53,3 +53,35 @@ function createCalender(){
   $(window).scroll(navbarCollapse);
 
 })(jQuery); // End of use strict
+
+const db = [
+  {
+    email: "aglasswala@gmail.com",
+    password: "123"
+  }, 
+  {
+    email: "mwing123@gmail.com",
+    password: "imsmall"
+  }, 
+  {
+    email: "jackv@gmail.com",
+    password: "124"
+  }
+
+]
+
+function signIn() {
+  const email = document.getElementById("inputEmail").value;
+  const pass = document.getElementById("inputPassword").value;
+
+  for(var j = 0; j < db.length; j++) {
+    if(db[j].email === email && db[j].password === pass) {
+      document.location.href = "body.html";
+      break;
+    } else {
+      console.log("GO FUCK YOURSELF")
+    }
+  }
+
+}
+
