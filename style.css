@@ -3,6 +3,10 @@ p, h1, nav, head, a, h2, input, a {
   font-family: "IBM Plex Mono", monospace;
 }
 
+label{margin-left: 20px;}
+#datepicker{width:180px; margin: 0 20px 20px 20px;}
+#datepicker > span:hover{cursor: pointer;}
+
 .section {
   background-size: cover;
   background-position: center center;

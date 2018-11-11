@@ -8,6 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+
     <link rel="stylesheet" type="text/css" href="style2.css">
 
     <title>StudyWITus</title>
@@ -24,68 +26,57 @@
     
 	<section class="section bg-warning">
     <div class="container">
-      <div class="display-4 text-white">November</div>
-      <div id="cardDisplay">
-        <div class="card-group">
-          <a href="first" class="custom-card" data-target="#first" data-toggle="modal">
-            <div class="card">
-              <div class="card-header">3</div>
-              <div class="card-body">
-                <ul id="firstList" class="list-group list-group-flush">
-                </ul>
-              </div>
-            </div>
-          </a>
-          <a href="second" class="custom-card" data-target="#second" data-toggle="modal">
-            <div class="card">
-              <div class="card-header">4</div>
-              <div class="card-body">
-                <ul id="secondList" class="list-group list-group-flush">
 
-                </ul>
-              </div>
-            </div>
-          </a>
-          <a href="third" class="custom-card" data-target="#third" data-toggle="modal">
-            <div class="card">
-              <div class="card-header">5</div>
-              <div class="card-body">
-                <ul id="thirdList" class="list-group list-group-flush">
+    <h2>November</h2>
 
-                </ul>
-              </div>
-            </div>
-          </a>
-          <a href="fourth" class="custom-card" data-target="#fourth" data-toggle="modal">
-            <div class="card">
-              <div class="card-header">6</div>
-              <div class="card-body">
-                <ul id="fourthList" class="list-group list-group-flush">
+        <hr />
 
-                </ul>
-              </div>
-            </div>
-          </a>
-          <a href="fifth" class="custom-card" data-target="#fifth" data-toggle="modal">
-            <div class="card">
-              <div class="card-header">7</div>            
-              <div class="card-body">
-                <ul id="fifthList" class="list-group list-group-flush">
+        <div class="agenda bg-light">
+            <div class="table-responsive">
+                <table class="table table-condensed table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Event</th>
 
-                </ul>
-              </div>
+                        </tr>
+                    </thead>
+                    <tbody id="tableMain">
+                        <!-- Single event in a single day -->
+                        <tr>
+                            <td class="agenda-date" class="active" rowspan="1">
+                                <div class="dayofmonth">26</div>
+                                <div class="dayofweek">Saturday</div>
+                                <div class="shortdate text-muted">Nov 2018</div>
+                            </td>
+                            <td class="agenda-time">
+                                5:30 PM
+                            </td>
+                            <td class="agenda-events">
+                                <div class="agenda-event">
+                                    <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>Aadil - Leetcode grind
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-          </a>
+        </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <a class="btn btn-info btn-block" href="first" data-target="#first" data-toggle="modal">Add Event </a>
         </div>
       </div>
     </div>
+
   </section>
 
     <div class="modal fade" id="first" tabindex="-1" role="dialog" aria-labelledby="oneone" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">November 3rd</h5>
+            <h5 class="modal-title">Let's see </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -93,48 +84,57 @@
           <div class="modal-body">
             <form>
               <div class="form-group">
-                <label for="courseOne">What are you studying?</label>
-                <input type="text" class="form-control" id="courseOne" placeholder="course">
+                <label for="courseOne">Where are you studying?</label>
+                <input type="text" class="form-control" id="courseOne" placeholder="course" required="true">
               </div>
               <div class="form-group">
-                <label for="timeOne">Example select</label>
+                <label for="timeOne">What time?</label>
                 <select class="form-control" id="timeOne">
-                  <option value="1:00">9:00 AM</option>
-                  <option value="1:30">9:30 AM</option>
-                  <option value="1:00">10:00 AM</option>
-                  <option value="1:30">10:30 AM</option>
-                  <option value="1:00">11:00 AM</option>
-                  <option value="1:30">11:30 AM</option>
-                  <option value="1:00">12:00 PM</option>
-                  <option value="1:00">1:00 PM</option>
-                  <option value="1:30">1:30 PM</option>
-                  <option value="2:00">2:00 PM</option>
-                  <option value="2:30">2:30 PM</option>
-                  <option value="3:00">3:00 PM</option>
-                  <option value="3:30">3:30 PM</option>
-                  <option value="4:00">4:00 PM</option>
-                  <option value="4:30">4:30 PM</option>
-                  <option value="5:00">5:00 PM</option>
-                  <option value="5:30">5:30 PM</option>
-                  <option value="6:00">6:00 PM</option>
-                  <option value="5:30">6:30 PM</option>
-                  <option value="6:00">7:00 PM</option>
-                  <option value="5:30">7:30 PM</option>
-                  <option value="6:00">8:00 PM</option>
-                  <option value="5:30">8:30 PM</option>
-                  <option value="6:00">9:00 PM</option>
-                  <option value="5:30">9:30 PM</option>
-                  <option value="6:00">10:00 PM</option>
-                  <option value="5:30">10:30 PM</option>
-                  <option value="6:00">11:00 PM</option>
-                  <option value="5:30">11:30 PM</option>
+                  <option value="9:00 AM">9:00 AM</option>
+                  <option value="9:30 AM">9:30 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="10:30 AM">10:30 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="11:30 AM">11:30 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="1:00 PM">1:00 PM</option>
+                  <option value="1:30 PM">1:30 PM</option>
+                  <option value="2:00 PM">2:00 PM</option>
+                  <option value="2:30 PM">2:30 PM</option>
+                  <option value="3:00 PM">3:00 PM</option>
+                  <option value="3:30 PM">3:30 PM</option>
+                  <option value="4:00 PM">4:00 PM</option>
+                  <option value="4:30 PM">4:30 PM</option>
+                  <option value="5:00 PM">5:00 PM</option>
+                  <option value="5:30 PM">5:30 PM</option>
+                  <option value="6:00 PM">6:00 PM</option>
+                  <option value="6:30 PM">6:30 PM</option>
+                  <option value="7:00 PM">7:00 PM</option>
+                  <option value="7:30 PM">7:30 PM</option>
+                  <option value="8:00 PM">8:00 PM</option>
+                  <option value="8:30 PM">8:30 PM</option>
+                  <option value="9:00 PM">9:00 PM</option>
+                  <option value="9:30 PM">9:30 PM</option>
+                  <option value="10:00 PM">10:00 PM</option>
+                  <option value="10:30 PM">10:30 PM</option>
+                  <option value="11:00 PM">11:00 PM</option>
+                  <option value="11:30 PM">11:30 PM</option>
                 </select>
               </div>
+              <div class="form-group">
+                <label for="courseOne">What's your name?</label>
+                <input type="text" class="form-control" id="nameOne" placeholder="name" required="true">
+              </div>
+              <label>Select Date: </label>
+                <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+                    <input class="form-control" type="text" id="dateOne" readonly />
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-outline-primary" onclick="run(firstList, courseOne, timeOne)">Save changes</button>
+            <button type="button" class="btn btn-outline-primary" onclick="run(courseOne, timeOne, nameOne, dateOne)">Save changes</button>
           </div>
         </div>
       </div>
@@ -378,6 +378,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
