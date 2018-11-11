@@ -32,7 +32,8 @@ $(function () {
 //   $('<li class="list-group-item"><div class="row justify-content-between"><div class="col-sm">' + course +'</div><div class="col-sm">'+ time + '</div></div></li>').appendTo(ulId)
 // }
 
-function run(courseNum, timeNum, nameNum, dateNum) {
+function run(courseNum, whereOne, timeNum, nameNum, dateNum) {
+  const where = whereOne.value;
   const course = courseNum.value;
   const time = timeNum.value;
   let name  = nameNum.value;
@@ -41,7 +42,7 @@ function run(courseNum, timeNum, nameNum, dateNum) {
 
   const a = getDate(dateNum.value, b);
 
-  name = name + " - " + course;
+  name = name + " - " + course + " in the " + where;
 
   $('<td class="agenda-time">' + time + '</td>').appendTo(b);
   $('<td class="agenda-events"><div class="agenda-event"><i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>' + name + '</div></td>').appendTo(b);
@@ -55,15 +56,15 @@ function getDate(x, b) {
   var year = arr[2];
 
 
-  if(month === 1) month = "Jan";
-  else if(month === "2 ") month = "Feb";
-  else if(month === "3 ") month = "Mar";
-  else if(month === "4 ") month = "Apr";
-  else if(month === "5 ") month = "May";
-  else if(month === "6 ") month = "Jun";
-  else if(month === "7 ") month = "Jul";
-  else if(month === "8 ") month = "Aug";
-  else if(month === "9 ") month = "Sep";
+  if(month === "1") month = "Jan";
+  else if(month === "2") month = "Feb";
+  else if(month === "3") month = "Mar";
+  else if(month === "4") month = "Apr";
+  else if(month === "5") month = "May";
+  else if(month === "6") month = "Jun";
+  else if(month === "7") month = "Jul";
+  else if(month === "8") month = "Aug";
+  else if(month === "9") month = "Sep";
   else if(month === "10") month = "Oct";
   else if(month === "11") month = "Nov";
   else if(month === "12") month = "Dec"; 
@@ -84,7 +85,7 @@ function getDate(x, b) {
   else if(day % 7 === sun) day = "Sunday";
   else if(day % 7 === mon) day = "Monday";
   else if(day % 7 === tue) day = "Tuesday";
-  else if(day % 7 === wed) day = "Wednesday";
+  else if(day % 7 === wed || day % 7 === 0) day = "Wednesday";
 
   $('<td class="agenda-date" class="active" rowspan="1"><div class="dayofmonth">' + arr[1] + '</div><div class="dayofweek">' + day + '</div><div class="shortdate text-muted">' + month + '</div></td>').appendTo(b);
 
@@ -136,45 +137,8 @@ function register(){
 
 
 
-(function($) {
-  "use strict"; // Start of use strict
 
-  // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top - 70)
-        }, 1000, "easeInOutExpo");
-        return false;
-      }
-    }
-  });
 
-  // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
-  });
-
-  // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#mainNav',
-    offset: 100
-  });
-
-  // Collapse Navbar
-  var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
-      $("#mainNav").addClass("navbar-shrink");
-    } else {
-      $("#mainNav").removeClass("navbar-shrink");
-    }
-  };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
-
-})(jQuery); // End of use strict
+$(function () {
+   $('#modalfirst').modal(toggle)
+});
