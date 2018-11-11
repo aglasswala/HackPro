@@ -92,10 +92,6 @@ function getDate(x, b) {
 
 }
 
-
-
-
-
 var db =
   data = [
   {
@@ -122,7 +118,8 @@ function signIn() {
       document.location.href = "body.html";
       break;
     } else {
-      console.log("GO FUCK YOURSELF")
+      document.getElementById("demo").innerHTML = "Wrong password or Email"
+
     }
   }
 

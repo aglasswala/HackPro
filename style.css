@@ -1,6 +1,7 @@
 
 p, h1, nav, head, a, h2, input, a {
   font-family: "IBM Plex Mono", monospace;
+  text-transform: lowercase;
 }
 
 label{margin-left: 20px;}
