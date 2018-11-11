@@ -9,8 +9,14 @@ p, h1, nav, head, a, h2, input, a, ul, div {
   min-height:100%;
   padding-top:75px;
 }
-.col-lg {
-  width: 5vw;
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+}
+
+.card {
+	height: 50vh;
+	width: 15vw;
 }
 
 .form-heading { color:#fff; font-size:23px;}

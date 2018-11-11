@@ -9,6 +9,7 @@ p, h1, nav, head, a, h2, input, a {
   width:100%;
   min-height:100%;
   padding-top:75px;
+  overflow: auto;
 }
 .col-lg {
   width: 5vw;
