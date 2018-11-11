@@ -1,5 +1,4 @@
-
-p, h1, nav, head, a, h2, input, a {
+p, h1, nav, head, a, h2, input, a, ul, div {
   font-family: "IBM Plex Mono", monospace;
 }
 
@@ -12,10 +11,6 @@ p, h1, nav, head, a, h2, input, a {
 }
 .col-lg {
   width: 5vw;
-}
-
-.signin {
-  display: block;
 }
 
 .form-heading { color:#fff; font-size:23px;}
@@ -151,35 +146,6 @@ p, h1, nav, head, a, h2, input, a {
     border-bottom: 0.25rem solid #64a19d;
   }
 }
-
-.btn {
-  -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
-  font-family: 'Varela Round';
-  font-size: 80%;
-  text-transform: uppercase;
-  letter-spacing: .15rem;
-  border: 0;
-}
-
-.btn-primary {
-  background-color: #64a19d;
-}
-
-.btn-primary:hover {
-  background-color: #4f837f;
-}
-
-.btn-primary:focus {
-  background-color: #4f837f;
-  color: white;
-}
-
-.btn-primary:active {
-  background-color: #467370 !important;
-}
-
 
 body, html {
   font-family: 'Nunito';
